@@ -16,90 +16,149 @@
     <main>
       <form
         action="/"
-        method="post"
+        method="get"
+        class="form"
       >
-        <label
-          >*Повне ім'я<input
-            type="text"
-            required
-        /></label>
-        <label
-          >*Email<input
-            type="email"
-            required
-        /></label>
-        <label
-          >*Пароль<input
-            type="password"
-            name="password"
-            required
-        /></label>
-        <label
-          >*Пароль ще раз<input
-            type="password"
-            name="repeat_password"
-            required
-        /></label>
-        <label
-          >Стать
-          <label
-            ><input
-              type="radio"
-              name="gender"
-              value="male"
-            />чоловіча</label
-          >
-          <label
-            ><input
-              type="radio"
-              name="gender"
-              value="female"
-            />жіноча</label
-          ></label
-        >
-        <label
-          >Вік<input
-            type="number"
-            name="age"
-        /></label>
-        <label
-          >*Курс
-          <select
-            name="course"
-            required
-          >
-            <option
-              value=""
-              disabled
-              selected
+        <fieldset class="form__fields">
+          <label class="field"
+            ><h2 class="field__name">*Повне ім'я</h2>
+            <input
+              type="text"
+              required
+              class="field__input"
+              name="name"
+          /></label>
+          <label class="field"
+            ><h2 class="field__name">*Email</h2>
+            <input
+              type="email"
+              name="email"
+              required
+              class="field__input"
+          /></label>
+          <label class="field"
+            ><h2 class="field__name">*Пароль</h2>
+            <input
+              type="password"
+              name="password"
+              required
+              class="field__input"
+          /></label>
+          <label class="field"
+            ><h2 class="field__name">*Пароль ще раз</h2>
+            <input
+              type="password"
+              name="repeat_password"
+              required
+              class="field__input"
+          /></label>
+          <label class="field"
+            ><h2 class="field__name">Стать</h2>
+            <label class="field"
+              ><input
+                type="radio"
+                name="gender"
+                value="male"
+                class="field__input radio"
+              />чоловіча</label
             >
-              -=Виберіть курс=-
-            </option>
-            <option value="frontend">FrontEnd</option>
-            <option value="design">Web Design</option>
-            <option value="qa">QA Manual</option>
-            <option value="java">Java</option>
-            <option value="python">Python</option>
-          </select>
-        </label>
-        <label>
-          Повна адреса
-          <textarea
-            name="address"
-            rows="4"
-            placeholder="Країна, регіон, місто/селище, вулиця"
-          ></textarea>
-        </label>
-        <label>
+            <label class="field"
+              ><input
+                type="radio"
+                name="gender"
+                value="female"
+                class="field__input radio"
+              />жіноча</label
+            ></label
+          >
+          <label class="field"
+            ><h2 class="field__name">Вік</h2>
+            <input
+              type="number"
+              name="age"
+              class="field__input"
+          /></label>
+          <label class="field"
+            ><h2 class="field__name">*Курс</h2>
+            <select
+              name="course"
+              required
+              class="field__input"
+            >
+              <option
+                class="option"
+                value=""
+                disabled
+                selected
+              >
+                -=Виберіть курс=-
+              </option>
+              <option
+                class="option"
+                value="frontend"
+              >
+                FrontEnd
+              </option>
+              <option
+                class="option"
+                value="design"
+              >
+                Web Design
+              </option>
+              <option
+                class="option"
+                value="qa"
+              >
+                QA Manual
+              </option>
+              <option
+                class="option"
+                value="java"
+              >
+                Java
+              </option>
+              <option
+                class="option"
+                value="python"
+              >
+                Python
+              </option>
+            </select>
+          </label>
+          <label class="field">
+            <h2 class="field__name">Повна адреса</h2>
+            <textarea
+              name="address"
+              rows="4"
+              placeholder="Країна, регіон, місто/селище, вулиця"
+              class="field__input"
+            ></textarea>
+          </label>
+        </fieldset>
+
+        <label class="field agreement">
           <input
             type="checkbox"
             name="agree"
             required
+            class="agreement__input"
           />
-          Я погоджуюсь з умовами обробки даних
+          <h2 class="agreement__text">Я погоджуюсь з умовами обробки даних</h2>
         </label>
-        <button type="reset">Очистити форму</button>
-        <button type="submit">Зареєструватися</button>
+        <div class="buttons">
+          <button
+            type="reset"
+            class="button"
+          >
+            Очистити форму
+          </button>
+          <button
+            type="submit"
+            class="button"
+          >
+            Зареєструватися
+          </button>
+        </div>
       </form>
     </main>
   </body>
