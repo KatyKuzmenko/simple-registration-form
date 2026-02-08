@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Registration</title>
+    <link
+      rel="stylesheet"
+      href="./css/style.css"
+    />
+  </head>
+  <body>
+    <main>
+      <form
+        action="/"
+        method="post"
+      >
+        <label
+          >*Повне ім'я<input
+            type="text"
+            required
+        /></label>
+        <label
+          >*Email<input
+            type="email"
+            required
+        /></label>
+        <label
+          >*Пароль<input
+            type="password"
+            name="password"
+            required
+        /></label>
+        <label
+          >*Пароль ще раз<input
+            type="password"
+            name="repeat_password"
+            required
+        /></label>
+        <label
+          >Стать
+          <label
+            ><input
+              type="radio"
+              name="gender"
+              value="male"
+            />чоловіча</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="gender"
+              value="female"
+            />жіноча</label
+          ></label
+        >
+        <label
+          >Вік<input
+            type="number"
+            name="age"
+        /></label>
+        <label
+          >*Курс
+          <select
+            name="course"
+            required
+          >
+            <option
+              value=""
+              disabled
+              selected
+            >
+              -=Виберіть курс=-
+            </option>
+            <option value="frontend">FrontEnd</option>
+            <option value="design">Web Design</option>
+            <option value="qa">QA Manual</option>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+          </select>
+        </label>
+        <label>
+          Повна адреса
+          <textarea
+            name="address"
+            rows="4"
+            placeholder="Країна, регіон, місто/селище, вулиця"
+          ></textarea>
+        </label>
+        <label>
+          <input
+            type="checkbox"
+            name="agree"
+            required
+          />
+          Я погоджуюсь з умовами обробки даних
+        </label>
+        <button type="reset">Очистити форму</button>
+        <button type="submit">Зареєструватися</button>
+      </form>
+    </main>
+  </body>
+</html>
