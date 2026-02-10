@@ -42,7 +42,7 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-[name='addres'] {
+[name='address'] {
   resize: vertical;
 }
 
